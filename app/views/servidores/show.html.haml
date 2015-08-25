@@ -43,8 +43,8 @@
       .panel.padding3.al
         %a.button.background_red.white{:href => servidores_delete_path(:id => @servidor.id),:confirm=>'Are you sure?'}
           = "Eliminar Servidor"
-        %a.button.background_gray.white{:href => servidores_list_path(:id => @servidor.id, :ip => @servidor.ip)}
-          = "Servidores"
+        %a.button.background_gray.white{:href => servidores_list_path()}
+          = "<- Servidores"
 
     .grid_2
       .panel.padding3.al

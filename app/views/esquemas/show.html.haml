@@ -1,0 +1,48 @@
+.wrapper
+  .grid_8.top
+    .grid_6.first
+      .grid_3.first
+        %h3.background_gray_clear.royal_blue
+          = @esquema.database_id
+          .float_right
+            %a.action-button{:href => edit_resource_path(@esquema.id)}
+              %span.pencil
+        %table.full.not-style
+          %tbody
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:nombre)
+              %td.ar
+                = @esquema.nombre
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:user)
+              %td.ar.gray
+                = @esquema.user
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:password)
+              %td.ar
+                = @esquema.password
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:tipo)
+              %td.ar
+                = @esquema.tipo
+
+   
+    .grid_2
+      .panel.padding3.al
+        %a.button.background_red.white{:href => esquemas_delete_path(:id => @database.id),:confirm=>'Are you sure?'}
+          = "Eliminar Esquema"
+        %a.button.background_gray.white{:href => ("/databases/" + @esquema.database.id.to_s)}
+          = "<- Bases de Datos"
+
+    .grid_2
+      .panel.padding3.al
+        %a.button.background_green.white{:href => esquemas_new_path(:id => @database.id)}
+          = "Nuevo Esquema"  
+
+  .clear
+  
+  

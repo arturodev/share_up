@@ -1,0 +1,50 @@
+%table.style.full
+  -links = [] if links.blank? 
+  %thead
+    %tr
+      - fild_names.each do |fild_name|
+        %th
+          = t("activerecord.attributes.#{request.path.singularize.sub('/','.')}."+fild_name.to_s)
+      - links.each do |fild_name|
+        %th
+  %tbody
+    - objects.each do |object|
+      %tr
+      - fild_names.each do |fild_name|
+        %td.ac
+          -if fild_name == "name".to_sym
+            =object.name
+          -elsif object[fild_name.to_sym].class.to_s == "TrueClass" || object[fild_name.to_sym].class.to_s == "FalseClass"
+            -#FIXME arreglar la traduccion, no quiere funcionar
+            = object[fild_name.to_sym] ? "Si" : "No"
+          - elsif fild_name["id"]
+            =object[fild_name.to_sym]
+          - elsif object[fild_name.to_sym].to_s['#']
+            #div{:style => "background:#{object[fild_name.to_sym]}; color:#{object[fild_name.to_sym]}"}
+              = object[fild_name.to_sym]
+          - elsif object[fild_name.to_sym].class.to_s == "Time" || object[fild_name.to_sym].class.to_s == "Date"
+            = ( l object[fild_name.to_sym], :format => :default)
+          - else
+            //FIXME Cuando el campo contiene Acentos.
+            = object[fild_name.to_sym]
+      - links.each do |link|
+        -if link == "show"
+          %td
+            %a.action-button{:href => esquema_path(object.id)}
+              %span.magnifier
+        -elsif link == "edit"
+          %td
+            %a.action-button{:href => edit_esquema_path(object.id)}
+              %span.pencil
+        -elsif link == "delete"
+          %td
+            //FIXME Arreglar Delete
+            %a.action-button{:href => delete_esquema_path(object.id,:database_id => @database.id), :method=> :delete, :confirm=>'Are you sure?'}
+              %span.delete
+:javascript
+    $(document).ready( function() {
+      $("*[confirm]").live("click", function(event){
+          var message = $(this).attr("confirm");
+          return confirm(message);
+        })
+    } );
