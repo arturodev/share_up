@@ -8,6 +8,8 @@ class EsquemasController < InheritedResources::Base
   end
 
   def edit
+    @esquema = Esquema.find_by_id(params[:id])
+    @database = @esquema.database
   end
 
   def delete
@@ -18,8 +20,8 @@ class EsquemasController < InheritedResources::Base
 
 
   def new
-    database = Database.find_by_id(params[:id])
-    @esquema = database.esquemas.new
+    @database = Database.find_by_id(params[:id])
+    @esquema = @database.esquemas.new
   end
   
   def create
@@ -27,4 +29,18 @@ class EsquemasController < InheritedResources::Base
     x = Esquema.create(params[:esquema])
     redirect_to(:controller => 'databases', :action => 'show', :id => x.database_id)
   end
+  
+  def update
+        params.permit!
+    @esquema = Esquema.find_by_id(params[:id])
+    if @esquema.update_attributes(params[:esquema])
+      
+      redirect_to(:controller => 'databases', :action => 'show', :id => @esquema.database_id)
+      flash[:notice] = "Esquema updated."
+    else
+      @section_count = @page.sections.size
+      render('edit')
+    end
+  end
+  
 end
