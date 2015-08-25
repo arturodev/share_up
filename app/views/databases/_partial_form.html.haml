@@ -1,0 +1,32 @@
+.wrapper
+  .grid_8.top
+    .grid_6.first
+      .grid_4.background_gray_clear
+        .panel.padding1
+          .form
+            .clearfix
+              = f.label :nombre
+              = f.text_field :nombre, :class=>"full", :required=>"required"
+            .clearfix
+              = f.label :sid
+              = f.text_field :sid
+            .clearfix
+              = f.label :cadena
+              = f.text_field :cadena
+            .clearfix
+              = f.label :puerto_db
+              = f.text_field :puerto_db
+            .clearfix
+              = f.label :is_active
+              = f.text_field :is_active
+            .clearfix
+              = f.hidden_field :servidor_id          
+            %hr/
+            .ar
+              .clearfix.top
+                %a.button.background_gray.white{:href => "/servidores/" + @servidor.to_s}
+                  = t :cancel
+                %button.button.background_gray.white{:type => "reset"}
+                  = t :clear
+                %button.button.background_red.white{:type => "submit"}
+                  = t :save

@@ -1,0 +1,58 @@
+.wrapper
+  .grid_8.top
+    .grid_6.first
+      .grid_3.first
+        %h3.background_gray_clear.royal_blue
+          = @database.nombre
+          .float_right
+            %a.action-button{:href => edit_database_path(@database.id)}
+              %span.pencil
+        %table.full.not-style
+          %tbody
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:nombre)
+              %td.ar
+                = @database.nombre
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:sid)
+              %td.ar.gray
+                = @database.sid
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:cadena)
+              %td.ar
+                = @database.cadena
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:puerto_db)
+              %td.ar
+                = @database.puerto_db
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:is_active)
+              %td.ar
+                = @database.nombre
+
+    .grid_2
+      .panel.padding3.al
+        %a.button.background_red.white{:href => net_validations_index_path(:id => @database.id)}
+          = "Eliminar base de datos"
+          
+        %a.button.background_gray.white{:href => "/servidores/" + @database.servidor.id.to_s}
+          = "<- Bases de datos"
+
+    .grid_2
+      .panel.padding3.al
+        %a.button.background_green.white{:href => esquemas_new_path(:id => @database.id)}
+          = "Nuevo Esquema"  
+    .grid_8
+      .grid_6.first
+        %h3.background_gray_clear.royal_blue
+          = "Esquemas"
+        .grid_6.first
+          = render :partial => '/partials/esquema_list_in_show', :locals => {:links => ["show","edit","delete"],:objects => @esquemas, :fild_names=> [:database_id, :nombre, :user, :password, :tipo]}
+
+  .clear
+  

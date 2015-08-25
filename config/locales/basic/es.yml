@@ -1,0 +1,86 @@
+es:
+  id: 'ID'
+  home: 'Home'
+  registered_as: 'Registrado como'
+  user: 'Usuario'
+  password: 'Contraseña'
+  users: 'Usuarios'
+  login: 'Iniciar Sesión'
+  welcome: 'Bienvenido !'
+  forgot_your_password: "¿Olvidaste tu Contraseña?"
+  success_login: 'Entrada Exitosa Bienvenido !'
+  please_login: 'Por Favor Inicia Sesión'
+  please_password: 'Por Favor Ingrese Contraseña'
+  welcome_message: 'Bienvenido al sistema de Monitoreo.'
+  profile: 'Mi Perfil'
+  logout: 'Cerrar Sesión'
+  save: 'Guardar'
+  cancel: 'Cancelar'
+  clear: 'Limpiar'
+  new: 'Nuevo'
+  edit: 'Editar'
+  show: 'Ver'
+  delete: 'Borrar'
+  destroy: 'Destruir'
+  true: 'Sí'
+  false: 'No'
+  yes: 'Sí'
+  no: 'No'
+  add: 'Agregar'
+  reports: 'Reportes'
+  date_birth: 'Fecha de Nacimiento'
+  change_date: 'Cambiar de Día'
+  start_date: 'Fecha de Inicio'
+  end_date: 'Fecha Fin'
+  enabled: 'Habilitado'
+  disabled: 'Deshabilitado'
+  processing: 'Procesando'
+  updating: 'Actualizando'
+  estimate: 'Estimación'
+  search: 'Buscar'
+  
+  #Configurations
+  configuration: 'Configuración'
+  system: 'Sistema'
+  production: 'Producción'
+  organization: 'Organización'
+  new_user: 'Nuevo Usuario'
+  new_rate: 'Nueva Tarifa'
+  new_report: 'Nuevo Reporte'
+  
+  #MeasurementRecord
+  organization_id: 'Organización'
+  meter_id: 'Medidor'
+  
+  #Organization
+  address: 'Dirección'
+  
+  #CustomReports
+  interface: 'Interfaz'
+  graphic: 'Grafico'
+  reading: 'Lectura'
+  all: 'Todo'
+  fecha: 'Fecha'
+  measurement_capacitance_for_date: 'Medición de Capacitancia por Día'
+  measurement_capacitance: 'Mediciónes de Capacitancia'
+  measurement: 'Mediciónes'
+  
+  #Meters
+  test_connection: 'Probar Conexion'
+  preview: 'Prevista'
+  parameters: 'Parámetros'
+  external_code: 'Código Externo'
+  
+  #Holding Registers
+  add_parameter: 'Agregar Parámetro'
+  parameter_name: 'Nombre del Parámetro'
+  
+  #ScheduleTypes
+  base: 'Base'
+  middle: 'Intermedia'
+  pike: 'Punta'
+  invoice_demand: 'Demanda Facturable'
+  total: 'Total'
+  max_base: 'Dem. Max Base'
+  max_middle: 'Dem. Max Intermedia'
+  max_pike: 'Dem. Max Punta'

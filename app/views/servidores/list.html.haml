@@ -1,0 +1,10 @@
+.wrapper
+  .grid_8.top
+    .grid_6.first
+      = render :partial => '/partials/datagrid', :locals => {:links => ["show","edit"],:objects => @servidor, :fild_names=> [:hostname, :ip, :puerto]}
+    .grid_2
+      .panel.padding3
+        %a.button.background_red.white{:href => new_resource_path}
+          = t :new
+        %a.button.background_gray.white{:href => configurations_path}
+          = t :configuration

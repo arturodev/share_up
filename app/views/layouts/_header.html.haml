@@ -1,0 +1,29 @@
+#header.background_gray_clear
+  .wrapper.gray
+    %h1.shadow.float_left
+      %img{:src => "/images/logo.png"}
+
+
+:javascript
+  //Open & Close Dashbord
+  btn_openDashbord = $("#btn_openDashbord");
+  dashbord = $("#dashbord");
+  
+  function openDashbord(){
+    btn_openDashbord.attr("onclick","").animate({opacity:0.4});
+    if(dashbord.css("margin-right") == "0px"){
+      dashbord.animate({
+        marginRight:"280px"
+      },500).show();
+    }
+  }
+  
+  function closeDashbord(){
+    btn_openDashbord.attr("onclick","openDashbord();").animate({opacity:0.4});
+    btn_openDashbord.animate({opacity:1});
+    if(dashbord.css("margin-right") == "280px"){
+      dashbord.animate({
+        marginRight:"0px"
+      },500).hide(300);
+    }
+  }

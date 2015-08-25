@@ -1,0 +1,17 @@
+en:
+  #Cuando no se tiene una session el lenguaje default es Ingles.
+  user: 'Usuario'
+  password: 'Contraseña'
+  login: 'Iniciar Sesión'
+  forgot_your_password: "¿Olvidaste tu Contraseña?"
+  please_login: 'Por Favor Inicia Sesión'
+  welcome_message: 'Bienvenido al sistema de Monitoreo.'
+  date_birth: 'Date Birth'
+  
+  #Configurations
+  system: 'System'
+  production: 'Production'
+  organization: 'Organization'
+  new_user: 'New User'
+  new_rate: 'New Rate'
+  new_report: 'New Report'

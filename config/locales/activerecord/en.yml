@@ -1,0 +1,25 @@
+en:
+  activerecord:
+    attributes:
+      p_config/person:
+        name: "Name"
+        last_name: "Last name"
+      p_config/user:
+        name: "Name"
+        last_name: "Last name"
+        login: "Login"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        email: "Email"
+        is_active: "Enabled"
+        is_operator: 'Es Operador'
+        is_manager: 'Es Administrador'
+        language: 'Language'
+      p_config/custom_report:
+        name: 'Name'
+        description: 'Description'
+        url_name: 'Access'
+        param_data: ''
+        is_active: 'Enabled'
+      p_config/organization:
+        

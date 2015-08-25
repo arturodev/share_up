@@ -1,0 +1,20 @@
+es:
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      month: "%b"
+      
+    day_names: [Domingo, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado]
+    abbr_day_names: [Dom, Lun, Mar, Mie, Jue, Vie, Sab]
+    small_day_names: [Do, Lu, Ma, Mi, Ju, Vi, Sa]
+    tiny_day_names: [D, L, M, M, J, V, S]
+    
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+    abbr_month_names: [~, Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+  
+  time:
+    formats:
+      default: "%H:%M"
+      format_date_picker: "%A, %d %B %Y [%H:%M]"
+    am: "am" 
+    pm: "pm"

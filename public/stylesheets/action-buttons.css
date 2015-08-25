@@ -1,0 +1,58 @@
+.action-button {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-indent: -999em;
+  outline: none !important;
+  /* IE7 hack */
+  zoom: 1;
+  *display: inline;
+}
+
+.action-button span {
+  margin-top: 0px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.action-button span.list {
+  margin-top: 0px;
+}
+
+.action-button span.home {
+  background: transparent url(/images/icons/home.png) no-repeat center center;
+}
+
+.action-button span.config {
+  background: transparent url(/images/icons/config.png) no-repeat center center;
+}
+
+.action-button span.add {
+  background: transparent url(/images/icons/add.png) no-repeat center center;
+}
+
+.action-button span.pencil {
+  background: transparent url(/images/icons/pencil.png) no-repeat center center;
+}
+
+.action-button span.magnifier {
+  background: transparent url(/images/icons/magnifier.png) no-repeat center center;
+}
+
+.action-button span.delete {
+  background: transparent url(/images/icons/delete.png) no-repeat center center;
+}
+
+.action-button span.connect {
+  background: transparent url(/images/icons/connect.png) no-repeat center center;
+}
+
+.action-button span.report {
+  background: transparent url(/images/icons/report.png) no-repeat center center;
+}

@@ -1,0 +1,21 @@
+es:
+  messages:
+    authentification_required: "Autenticacion Requerida"
+    ip_not_found: 'Su IP no fue localizada en su catálogo de Estaciones.'
+    priviledge_error: 'No se tiene Privilegios para esta Aréa'
+    #Configurations Index
+    index:
+      holding_registers: 'Es necesario tener registros de retención'
+      schedule: ' Es necesario tener horarios'
+      periods: 'Es necesario tener periodos'
+    meters:
+      not_ping: 'No es posible conectar'
+      required_fields: 'Favor de llenar los campos requeridos.'
+    rates:
+      not_rate_selected: 'No se encuentra Tarifa.'
+    electric_parameters:
+      example_algebraic_expression: 'Ejemplo: Valor / 1000'
+  activerecord:
+    errors:
+      messages:
+        ip_station: 'IP esta asignada a otra estación'

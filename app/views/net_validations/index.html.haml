@@ -1,0 +1,22 @@
+.wrapper
+  .grid_8.top
+    .grid_6.first
+      .grid_3.first
+        %h3.background_gray_clear.royal_blue
+          = @status
+          .float_right
+
+        %table.full.not-style
+          %tbody
+            %tr
+              %td.al
+                = Servidor.human_attribute_name(:hostname)
+              %td.ar
+                = @ipp
+
+    .grid_2
+      .panel.padding3.ac
+
+  .clear
+  
+  

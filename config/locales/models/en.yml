@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    models:
+      p_config/holding_register:
+        one: 'Holding Register'
+        other: 'Holding Registers'
+      p_config/organization:
+        one: 'Organization'
+        other: 'Organizations'
+      p_config/person:
+        one: 'Person'
+        other: 'Personas'
+      p_config/user:
+        one: 'User'
+        other: 'Users'
+      p_config/rate:
+        one: 'Rate'
+        other: 'Rates'
+      p_config/custom_report:
+        one: 'Report'
+        other: 'Reports'
+      p_config/meter:
+        one: 'Meter'
+        other: 'Meters'

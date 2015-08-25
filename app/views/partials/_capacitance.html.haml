@@ -1,0 +1,33 @@
+%table.full.not-style
+  %tbody
+    %tr
+      %td.al
+        = PConfig::Meter.human_attribute_name(:name)
+      %td.ar.bold
+        %a.not_decoration.blue{:href => polymorphic_path([object.organization, :meter], :id => object.id)}
+          = object.name
+    %tr
+      %td.al
+        = PConfig::Meter.human_attribute_name(:ip_address)
+      %td.ar
+        = object.nullo.ip_address.if_nil("--")
+    %tr
+      %td.al
+        = PConfig::Meter.human_attribute_name(:gateway)
+      %td.ar
+        = object.nullo.gateway.if_nil("--")
+    %tr
+      %td.al
+        = PConfig::Meter.human_attribute_name(:unit_id)
+      %td.ar
+        = object.nullo.unit_id.if_nil("--")
+    %tr
+      %td.al
+        = PConfig::Meter.human_attribute_name(:nomenclature)
+      %td.ar
+        = object.nullo.nomenclature.if_nil("--")
+    %tr
+      %td.al
+        = PConfig::Meter.human_attribute_name(:number_of_records)
+      %td.ar
+        = object.nullo.number_of_records.if_nil("--")

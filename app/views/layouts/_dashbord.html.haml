@@ -1,0 +1,48 @@
+#dashbord
+  .background_blue_cian.padding2{:style => "width:100%; height:110px;"}
+    %img.pointer{:src => "/images/icons/close_grid.png", :onclick => "closeDashbord(this);", :width => "40px", :style=>"margin:10px 0 0 10px;"}
+      %h2.white
+        = "Dashboard"
+  
+  .content.background_white
+    .padding3
+      %table.full.not-style
+        %tbody
+          %tr
+            %td.clearfix
+              %h4
+                %a.action-button.not_decoration{:href => home_path}
+                  %span.home
+                %a.not_decoration.gray.bold.float_right{:href => home_path, :style => "margin:2px 0 0 5px;"}
+                  = t :home
+          %tr
+            %td.clearfix
+              %h4
+                %a.action-button.not_decoration{:href => configurations_path}
+                  %span.config
+                %a.not_decoration.gray.bold.float_right{:href => configurations_path, :style => "margin:2px 0 0 5px;"}
+                  = t :configuration
+          %tr
+            %td.clearfix
+              %h4
+                .action-button
+                  %span.report
+                .gray.float_right{:style => "margin:2px 0 0 5px;"}
+                  = PConfig::CustomReport.model_name.human(:count => :other)
+          - PConfig::CustomReport.all.each do |report|
+            %tr
+              %td
+                %li{:style => "margin-left:35px;"}
+                  %a.not_decoration.blue.bold{:href => start_report_p_config_organization_custom_report_path(report.organization_id,report)}
+                    = report.name
+          
+  .background_gray_clear.gray{:style => "width:100%; height:180px; position:absolute; bottom:0; "}
+    %h5
+      = t(:registered_as) + ": "
+      %a.orange.bold.not_decoration{:href => "#"}
+        = current_user.name
+    %h5
+      = t(:date_birth) + ": " + current_user.person.date_birth.to_s
+    %h5
+      %a.orange.bold.not_decoration{:href => destroy_session_p_config_user_sessions_path}
+        = t :logout

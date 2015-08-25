@@ -1,0 +1,87 @@
+es:
+  activerecord:
+    attributes:
+      p_config/schedule:
+        schedule_type_id: 'Nombre'
+        start_time: 'Hora Inicio'
+        end_time: 'Hora Fin'
+      p_config/electric_parameter:
+        name: 'Nombre'
+        position: 'Posicion'
+        add_algebraic_expression: 'Expresión Algebraica'
+        algebraic_expression: 'Expresión Algebraica'
+        is_graphic: '¿Es Gráficable?'
+        is_active: '¿Habilitado?'
+        is_calculable: '¿Es calculable?'
+      p_config/holding_register:
+        name: 'Nombre'
+        description: 'Descripción'
+        external_code: 'Código Externo'
+        is_active: '¿Habilitado?'
+      p_config/period:
+        name: 'Nombre'
+        schedule_id: 'Horario'
+        start_date: 'Fecha de inicio'
+        end_date: 'Fecha fin'
+      p_config/rate:
+        name: 'Nombre'
+        period_id: 'Periodo'
+        region: 'Region'
+        middle: 'Intermedia'
+        peak: 'Punta'
+        invoice_demand: 'Cargo por kilowatt de demanda facturable'
+        hour_peak_energy: 'Cargo por kilowatt de hora de energía de punta'
+        hour_intermediate_energy: 'Cargo por kilowatt - hora de energía intermedia'
+        hour_base_energy: 'Cargo por kilowatt - hora de energía de base'
+      p_config/person:
+        name: 'Nombre'
+        last_name: 'Apellido'
+      p_config/user:
+        name: 'Nombre'
+        last_name: 'Apellido'
+        login: 'Cuenta'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmar Contraseña'
+        email: 'Email'
+        is_active: 'Habilitado'
+        is_operator: 'Es Operador'
+        is_manager: 'Es Administrador'
+        language: 'Lenguaje'
+      p_config/custom_report:
+        name: 'Nombre'
+        description: 'Descripción'
+        url_name: 'Acceso'
+        param_data: ''
+        is_active: 'Habilitado'
+        created_at: 'Creado'
+        updated_at: 'Actualizado'
+      p_config/organization:
+        name: 'Nombre'
+        external_code: 'Código Externo'
+        rfc: 'RFC'
+        phones: 'Teléfono(s)'
+        street: 'Calle'
+        number: 'Número'
+        city: 'Ciudad'
+        state: 'Estado'
+        country: 'País'
+        zip_code: 'Código Postal'
+        is_owner: ¿Es Corporativo?
+        is_active: 'Habilitado'
+      p_config/meter:
+        name: 'Nombre'
+        ip_address: 'IP'
+        gateway: 'Puerto'
+        unit_id: 'Unidad de Identificación'
+        nomenclature: 'Nomenclatura'
+        number_of_records: 'Número de Registros'
+        is_active: 'Habilitado'
+        rate_id: 'Tarifa'
+        has_parent: 'Es Padre'
+        has_child: 'Es Hijo'
+        child_id: 'Hijo'
+        parent_id: 'Padre'
+      p_config/time_zone:
+        name: 'Nombre'
+        hours: 'Horas'
+       

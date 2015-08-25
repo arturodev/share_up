@@ -1,0 +1,30 @@
+.wrapper
+  .grid_8.top
+    .grid_6.first
+      .grid_4.background_gray_clear
+        .panel.padding1
+          .form
+            .clearfix
+              = f.label :hostname
+              = f.text_field :hostname, :class=>"full", :required=>"required"
+            .clearfix
+              = f.label :ip
+              = f.text_field :ip
+            .clearfix
+              = f.label :puerto
+              = f.text_field :puerto
+            .clearfix
+              = f.label :usuario
+              = f.text_field :usuario
+            .clearfix
+              = f.label :password
+              = f.text_field :password
+            %hr/
+            .ar
+              .clearfix.top
+                %a.button.background_gray.white{:href => servidores_list_path}
+                  = t :cancel
+                %button.button.background_gray.white{:type => "reset"}
+                  = t :clear
+                %button.button.background_red.white{:type => "submit"}
+                  = t :save

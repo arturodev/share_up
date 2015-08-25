@@ -1,0 +1,39 @@
+es:
+  activerecord:
+    models:
+      p_config/resistor:
+        one: 'Resistencia'
+        other: 'Resistencias'
+      p_config/time_zone:
+        one: 'Zona Horaria'
+        other: 'Zonas Horarias'
+      p_config/schedule:
+        one: 'Horario'
+        other: 'Horarios'
+      p_config/electric_parameter:
+        one: 'Parámetro Eléctrico'
+        other: 'Parámetros Eléctricos'
+      p_config/holding_register:
+        one: 'Registro de Retención'
+        other: 'Registros de Retención'
+      p_config/organization:
+        one: 'Organización'
+        other: 'Organizaciones'
+      p_config/person:
+        one: 'Persona'
+        other: 'Personas'
+      p_config/user:
+        one: 'Usuario'
+        other: 'Usuarios'
+      p_config/rate:
+        one: 'Tarifa'
+        other: 'Tarifas'
+      p_config/custom_report:
+        one: 'Reporte'
+        other: 'Reportes'
+      p_config/meter:
+        one: 'Medidor'
+        other: 'Medidores'
+      p_config/period:
+        one: 'Periodo'
+        other: 'Periodos'

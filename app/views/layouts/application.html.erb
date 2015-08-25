@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>H3 Share Up</title>
+    <!-- Action Buttons -->
+    <%= stylesheet_link_tag "action-buttons" %>
+    <!-- Class Colors -->
+    <%= stylesheet_link_tag "colors" %>
+    <!-- Globals -->
+    <%= stylesheet_link_tag "esmindustries	" %>
+    <!-- Uniform Aristo -->
+    <%= stylesheet_link_tag "uniform.aristo" %>
+    <!-- Calendar Date Picker -->
+    <%= stylesheet_link_tag "calendar_date_picker/calendar_date_picker" %>
+    <!-- Charts -->
+    <%= stylesheet_link_tag "charts/nv.d3" %>
+    <!-- CSS Aditionals -->
+    <%= yield :css %>
+    <!-- JQuery-->
+    <%= javascript_include_tag "jquery-1.6.4" %>
+    <!-- Globals -->
+    <%= javascript_include_tag "esmindustries" %>
+    <!-- Uniform Aristo -->
+    <%= javascript_include_tag "jquery.uniform" %>
+    <!-- Calendar Pick -->
+    <%= javascript_include_tag "calendar_date_picker/calendar_date_picker" %>
+    <!-- Charts -->
+    <%= javascript_include_tag "charts/d3.v2.min" %>
+    <%= javascript_include_tag "charts/chart.d3" %>
+    <%= javascript_include_tag "charts/nv.d3" %>
+    <!-- Java Aditionals -->
+    <%= yield :js %>
+</head>
+<body>
+    <div id="wrapper">
+      <%= render :partial => "partials/processing" %>
+      <%= render :partial => "layouts/header" %>
+      <%= yield %>
+    </div>
+    <%= render :partial => "layouts/footer" %>
+</body>
+</html>

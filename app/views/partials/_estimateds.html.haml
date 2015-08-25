@@ -1,0 +1,34 @@
+%table.style.full.background_gray_clear{:style => "border:0px;"}
+  %tbody.bold
+    %tr
+      %td.al.royal_blue
+        = t(:base)
+      %td.ar
+        - @base = (measurement.base.to_f * meter.rate.hour_base_energy.to_f).round(2)
+        = "$ " + @base.to_s
+    %tr
+      %td.al.royal_blue
+        = t(:middle)
+      %td.ar
+        - @middle = (measurement.middle.to_f * meter.rate.hour_intermediate_energy.to_f).round(2)
+        = "$ " + @middle.to_s
+    %tr
+      %td.al.royal_blue
+        = t(:pike)
+      %td.ar
+        - @pike = (measurement.pike.to_f * meter.rate.hour_peak_energy.to_f).round(2)
+        = "$ " + @pike.to_s
+    %tr
+      %td.al.royal_blue
+        = t(:invoice_demand)
+      %td.ar
+        - @invoice_demand = (invoice_demand.to_f * meter.rate.invoice_demand.to_f).round(2)
+        = "$ " + @invoice_demand.to_s
+    %tr.background_white
+      %td
+      %td
+    %tr
+      %td.al.royal_blue
+        = t(:total)
+      %td.ar
+        = "$ " + (@base + @middle + @pike + @invoice_demand).round(2).to_s
