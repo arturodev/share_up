@@ -22,7 +22,7 @@
             %hr/
             .ar
               .clearfix.top
-                %a.button.background_gray.white{:href => servidores_list_path}
+                %a.button.background_gray.white{:href => "/servidores/" + @servidor.id.to_s}
                   = t :cancel
                 %button.button.background_gray.white{:type => "reset"}
                   = t :clear
