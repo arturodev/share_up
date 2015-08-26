@@ -3,6 +3,10 @@
     %h1.shadow.float_left
       %img{:src => "/images/logo.png"}
 
+    .ar.float_right.padding1
+      #btn_openDashbord
+        %img.pointer{:src => "/images/icons/dbicon2.png", :onclick => "openDashbord();", :width => "50px"}
+    = render :partial => "layouts/dashbord"
 
 :javascript
   //Open & Close Dashbord
