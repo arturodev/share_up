@@ -6,7 +6,7 @@
   
   .content.background_white
     .padding2
-      %table.full.not-style
+      %table.style.full
         %tbody
           %tr
             %td.clearfix
@@ -21,21 +21,21 @@
                 %a.action-button.not_decoration{:href => servidores_list_path}
                   %span
                 %a.not_decoration.gray.bold.float_right{:href => servidores_list_path, :style => "margin:2px 0 0 5px;"}
-                  = "Servidores"
+                  = t :servidores
           %tr
             %td.clearfix
               %h4
                 %a.action-button.not_decoration{:href => servidores_list_path}
                   %span
                 %a.not_decoration.gray.bold.float_right{:href => servidores_list_path, :style => "margin:2px 0 0 5px;"}
-                  = "Web Services"
+                  = t :portales
           %tr
             %td.clearfix
               %h4
                 %a.action-button.not_decoration{:href => servidores_list_path}
                   %span
                 %a.not_decoration.gray.bold.float_right{:href => servidores_list_path, :style => "margin:2px 0 0 5px;"}
-                  = "Proyectos"
+                  = t :aplicaciones
           %tr
             %td.clearfix
               %h4
